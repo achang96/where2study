@@ -1,1 +1,1 @@
-# where2study
+# BMGT404 Final Project: where2study
