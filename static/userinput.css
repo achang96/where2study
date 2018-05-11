@@ -1,0 +1,12 @@
+.userinput-form {
+    text-align: center;
+}
+
+.userinput-form-inner {
+    display: inline-block;
+    text-align: left;
+}
+
+.form-check-label {
+    font-weight:normal;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+	<meta charset = "UTF-8" />
+	<head>
+		<title> User Information </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="static/userinput.css" type="text/css">
+		<link rel="stylesheet" href="static/main.css" type="text/css">
+	</head>
+	<body>
+		<header>
+            <a href="/">where<span id="logomiddle">2</span>study</a>
+		</header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="welcome card">
+						<h3>Please tell us about yourself!</h3>
+                        <br>
+						<div class="welcome-inner">
+							<form action="results" method="POST" class="form">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" class="form-control" id="name"/>
+								</div>
+								<div class="form-group">
+									<label for="year">Academic Year</label>
+									<select class="form-control" id="year">
+                                        <option>Freshman</option>
+                                        <option>Sophomore</option>
+                                        <option>Junior</option>
+                                        <option>Senior</option>
+                                    </select>
+								</div>
+                                <div class="form-group">
+                                    <label>School</label>
+                                    <select multiple class="form-control" id="school">
+                                        <option>College of Agriculture and Natural Resources</option>
+                                        <option>School of Architecture, Planning, and Preservation</option>
+                                        <option>College of Arts and Humanities</option>
+                                        <option>College of Behavioral and Social Sciences</option>
+                                        <option>Robert H. Smith School of Business</option>
+                                        <option>College of Computer, Mathematical and Natural Sciences</option>
+                                        <option>College of Education</option>
+                                        <option>A. James Clark School of Engineering</option>
+                                        <option>Philip Merrill College of Journalism</option>
+                                        <option>College of Information Studies</option>
+                                        <option>School of Public Health</option>
+                                        <option>School of Public Policy</option>
+                                    </select>
+                                    <small id="schoolHelp" class="form-text text-muted">Use command key to select multiple schools.</small>
+                                </div>
+                                <div class="form-group">
+									<label for="gpa">GPA</label>
+									<select class="form-control" id="gpa">
+                                        <option>< 2.75</option>
+                                        <option>2.75-2.99</option>
+                                        <option>3.00-3.24</option>
+                                        <option>3.25-3.49</option>
+                                        <option>3.50-3.74</option>
+                                        <option>3.75-4.00</option>
+                                    </select>
+								</div>
+                                <div class="form-group">
+                                    <label>Second Language</label>
+                                    <select multiple class="form-control" id="seclang">
+                                        <option>None</option>
+                                        <option>Arabic</option>
+                                        <option>Chinese</option>
+                                        <option>French</option>
+                                        <option>German</option>
+                                        <option>Hindi</option>
+                                        <option>Italian</option>
+                                        <option>Japanese</option>
+                                        <option>Korean</option>
+                                        <option>Portuguese</option>
+                                        <option>Russian</option>
+                                        <option>Spanish</option>
+                                        <option>Vietnamese</option>
+                                    </select>
+                                    <small id="seclangHelp" class="form-text text-muted">Use command key to select multiple languages.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Purpose</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="purpose1" value="">
+                                        <label class="form-check-label" for="purpose1">Academic</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="purpose2" value="">
+                                        <label class="form-check-label" for="purpose2">Internship</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Credit Type</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="credit1" value="">
+                                        <label class="form-check-label" for="credit1">Resident Credit</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="credit2" value="">
+                                        <label class="form-check-label" for="credit2">Transfer Credit</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Region</label>
+                                    <select multiple class="form-control" id="region">
+                                        <option>Africa</option>
+                                        <option>Asia</option>
+                                        <option>Europe</option>
+                                        <option>South America</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cost Range</label>
+                                    <select class="form-control" id="cost">
+                                        <option>< 20,000</option>
+                                        <option>20,000-29,999</option>
+                                        <option>30,000-39,999</option>
+                                        <option>40,000-49,999</option>
+                                        <option>> 50,000</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Housing</label>
+                                    <select multiple class="form-control" id="housing">
+                                        <option>Apartment</option>
+                                        <option>Campus</option>
+                                        <option>Host</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Extracurricular Activities</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity1" value="">
+                                        <label class="form-check-label" for="activity1">Organized Trips</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity2" value="">
+                                        <label class="form-check-label" for="activity2">Outdoor Activities</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity3" value="">
+                                        <label class="form-check-label" for="activity3">Sports</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity4" value="">
+                                        <label class="form-check-label" for="activity4">Career Development</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity5" value="">
+                                        <label class="form-check-label" for="activity5">Educational</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="activity6" value="">
+                                        <label class="form-check-label" for="activity6">Volunteer</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Program Length</label>
+                                    <select multiple class="form-control" id="length">
+                                        <option>Semester-Spring</option>
+                                        <option>Semester-Fall</option>
+                                        <option>Full Year</option>
+                                    </select>
+                                </div>
+                                <form action="results" method="POST" class="form">
+                                    <div class="form-group">
+                                        <input class="btn btn-primary btn-themed" type="submit" value="Submit"> </input>
+                                    </div>
+                                </form>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</HTML>

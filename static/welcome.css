@@ -1,0 +1,22 @@
+.welcome {
+    text-align: center;
+}
+
+.welcome h1 {
+    margin-bottom: 20px;
+}
+
+.welcome-inner {
+    display: inline-block;
+    text-align: center;
+}
+
+.welcome-btn {
+    background-color: #10d4af;
+    border-color: #ffbc25;
+}
+
+.welcome-btn:hover {
+    background-color: #ffbc25;
+    border-color: #faa514;
+}
