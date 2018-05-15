@@ -1,0 +1,19 @@
+h3 {
+    color: #10d4af;
+}
+
+p {
+    white-space:pre-wrap;
+}
+
+.link:link {
+    color: #ffbc25;
+}
+
+.link:visited {
+    color: #ffbc25;
+}
+
+.link:hover {
+    color: #faa514;
+}

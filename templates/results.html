@@ -4,7 +4,7 @@
 		<title> Results </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="static/projectinfo.css" type="text/css">
+		<link rel="stylesheet" href="static/results.css" type="text/css">
 		<link rel="stylesheet" href="static/main.css" type="text/css">
 	</head>
 	<body>
@@ -15,9 +15,27 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="welcome card">
-						<h3>Your Results</h3>
+						<h2>Results</h2>
+						<p>You can click on the study abroad program names to learn more about the program!</p>
 						<br/>
-						</div>
+
+						{% if first and second and third %}
+							<h3><u>Our first recommendation:</u></h3>
+							<h4><a class="link" href={{first[2]}}> {{ first[0] }} </a></h4>
+							<p> {{ first[1] }} </p>
+
+							<h3><u>Our second recommendation:</u></h3>
+							<h4><a class="link" href={{second[2]}}> {{ second[0] }} </a></h4>
+							<p> {{ second[1] }} </p>
+
+							<h3><u>Our third recommendation:</u></h3>
+							<h4><a class="link" href={{third[2]}}> {{ third[0] }} </a></h4>
+							<p> {{ third[1] }} </p>
+
+						{% else %}
+							<h1> Oops! You may have missed a few values. Please fill out the form again. </h1>
+						{% endif %}
+
 					</div>
 				</div>
 			</div>
