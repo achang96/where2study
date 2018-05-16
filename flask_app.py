@@ -147,11 +147,6 @@ def userinput(message=None):
 		except(KeyError):
 			return render_template('userinput.html', message = "Please make selections in all fields before submitting form.")
 
-@app.route('/results', methods=['GET','POST'])
-def results(first, second, third):
-	return render_template('results.html', first = sug1, second = sug2, third = sug3)
-
-
 # Run Flask app with debugging feature
 if __name__ == "__main__":
     app.run(debug=True)
